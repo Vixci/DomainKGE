@@ -1,0 +1,12 @@
+dataset:
+  entity_map: entity_map.del
+  name: aifb
+  num_entities: 8282
+  num_relations: 47
+  relation_map: relation_map.del
+  test: test.del
+  test_size: 5845
+  train: train.del
+  train_size: 17534
+  valid: valid.del
+  valid_size: 5845
