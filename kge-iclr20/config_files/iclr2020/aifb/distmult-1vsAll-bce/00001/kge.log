@@ -1,2 +1,0 @@
-2020-06-14 10:25:50.383456 [5518e8bf] Setting reciprocal_relations_model.base_model.entity_embedder.dropout to 0, was set to -0.16762414947152138.
-2020-06-14 10:25:50.385459 [5518e8bf] Setting reciprocal_relations_model.base_model.relation_embedder.dropout to 0, was set to -0.4280645530670881.
