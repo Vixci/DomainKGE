@@ -1,0 +1,14 @@
+0	http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+1	http://dl-learner.org/mutagenesis#charge
+2	http://dl-learner.org/mutagenesis#inBond
+3	http://dl-learner.org/mutagenesis#hasAtom
+4	http://dl-learner.org/mutagenesis#hasBond
+5	http://dl-learner.org/mutagenesis#hasFifeExamplesOfAcenthrylenes
+6	http://dl-learner.org/mutagenesis#hasStructure
+7	http://dl-learner.org/mutagenesis#logp
+8	http://dl-learner.org/mutagenesis#hasThreeOrMoreFusedRings
+9	http://www.w3.org/2000/01/rdf-schema#subClassOf
+10	http://dl-learner.org/mutagenesis#lumo
+11	http://dl-learner.org/mutagenesis#act
+12	http://www.w3.org/2000/01/rdf-schema#range
+13	http://www.w3.org/2000/01/rdf-schema#domain

@@ -1,0 +1,59 @@
+dataset:
+  name: aifb
+  num_entities: 8280
+  num_relations: 47
+distmult:
+  entity_embedder:
+    dropout: 0.4299407581787411
+    regularize_weight: 2.5293110081903426e-08
+  relation_embedder:
+    dropout: 0.04866282383451681
+    regularize_weight: 9.621355343287112e-15
+entity_ranking:
+  metrics_per:
+    relation_type: true
+eval:
+  batch_size: 256
+import:
+- reciprocal_relations_model
+- distmult
+lookup_embedder:
+  dim: 128
+  initialize: uniform_
+  initialize_args:
+    normal_:
+      mean: 0.0
+      std: 0.0005822995127016825
+    uniform_:
+      a: -0.5777636848101138
+    xavier_normal_:
+      gain: 1.0
+    xavier_uniform_:
+      gain: 1.0
+model: distmult
+negative_sampling:
+  implementation: batch
+reciprocal_relations_model:
+  base_model:
+    type: distmult
+train:
+  auto_correct: true
+  batch_size: 512
+  loss_arg: .nan
+  lr_scheduler: ReduceLROnPlateau
+  lr_scheduler_args:
+    factor: 0.95
+    mode: max
+    patience: 7
+    threshold: 0.0001
+  max_epochs: 400
+  optimizer_args:
+    lr: 0.41499438920770404
+  type: 1vsAll
+valid:
+  early_stopping:
+    min_threshold:
+      epochs: 50
+      metric_value: 0.05
+    patience: 10
+

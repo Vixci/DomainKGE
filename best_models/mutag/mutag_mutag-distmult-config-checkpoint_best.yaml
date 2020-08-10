@@ -1,0 +1,59 @@
+dataset:
+  name: /var/scratch/vcc500/kge-iclr20/data_dumps/mutag
+  num_entities: 15260
+  num_relations: 14
+distmult:
+  entity_embedder:
+    dropout: 0.4999999057165061
+    regularize_weight: 2.4364295425748148e-09
+  relation_embedder:
+    dropout: 0.49999996652858625
+    regularize_weight: 1.1122018050741717e-11
+entity_ranking:
+  metrics_per:
+    relation_type: true
+eval:
+  batch_size: 256
+import:
+- reciprocal_relations_model
+- distmult
+lookup_embedder:
+  dim: 128
+  initialize: uniform_
+  initialize_args:
+    normal_:
+      mean: 0.0
+      std: 0.005048928812354876
+    uniform_:
+      a: -0.28922745972825015
+    xavier_normal_:
+      gain: 1.0
+    xavier_uniform_:
+      gain: 1.0
+model: distmult
+negative_sampling:
+  implementation: batch
+reciprocal_relations_model:
+  base_model:
+    type: distmult
+train:
+  auto_correct: true
+  batch_size: 512
+  loss_arg: .nan
+  lr_scheduler: ReduceLROnPlateau
+  lr_scheduler_args:
+    factor: 0.95
+    mode: max
+    patience: 4
+    threshold: 0.0001
+  max_epochs: 400
+  optimizer_args:
+    lr: 0.9999999930384977
+  type: 1vsAll
+valid:
+  early_stopping:
+    min_threshold:
+      epochs: 50
+      metric_value: 0.05
+    patience: 10
+
