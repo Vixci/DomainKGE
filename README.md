@@ -11,8 +11,6 @@ The choice of loss function has by far the highest impact on the performance, fo
 
  By comparison with the results obtained by the original  [ICLR 20 experiment](https://github.com/uma-pi1/kge-iclr20) using LibKGE on FB15K-237and WNRR, the models performed notably better in my experiment, which can be explained by the domain specific biases in the datasets  used in this experiment.
 
-Below there are the 
-
 #### AIFB
 
 |                                                                                                       |   MRR | Hits@1 | Hits@3 | Hits@10 |                                                                                      Config file |                                                                              Pretrained model |
