@@ -29,7 +29,7 @@ The choice of loss function has by far the highest impact on the performance, fo
 | [TransE](https://papers.nips.cc/paper/5071-translating-embeddings-for-modeling-multi-relational-data) | 0.331 |  0.258 |  0.368 |   0.469 |   [config file](https://github.com/Vixci/bachelor/blob/master/best_models/aifb/aifb_aifb-transe-config-checkpoint_best.yaml) |   NegSamp-kl |
 [DistMult](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ICLR2015_updated.pdf)  | 0.341 |  0.271 |  0.369 |   0.480 | [config file](https://github.com/Vixci/bachelor/blob/master/best_models/aifb/aifb_aifb-distmult-config-checkpoint_best.yaml) | 1VsAll-kl |
 | [ComplEx](http://proceedings.mlr.press/v48/trouillon16.pdf)                                           | 0.330 |  0.263 |  0.361 |   0.469 |  [config file](https://github.com/Vixci/bachelor/blob/master/best_models/aifb/aifb_aifb-complex-config-checkpoint_best.yaml) |  1VsAll-kl |
-| [ConvE](https://arxiv.org/abs/1707.01476)                                                             | 0.290 |  0.233 |  0.317 |   0.403 |    [config file](https://github.com/Vixci/bachelor/blob/master/best_models/aifb/aifb_aifb-conve-config-checkpoint_best.yaml) |     1vsAll-kl |
+| [ConvE](https://arxiv.org/abs/1707.01476)                                                             | 0.290 |  0.233 |  0.317 |   0.403 |    [config file](https://github.com/Vixci/bachelor/blob/master/best_models/aifb/aifb_aifb-conve-config-checkpoint_best.yaml) |     1vsAll-bce |
 
 ## Reproducing our experiment
 Follow the instructions at [LibKGE](https://github.com/uma-pi1/kge) to install it.
